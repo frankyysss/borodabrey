@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BORODABREY — premium barbershop</title>
+  <meta name="description" content="BORODABREY — premium barbershop в Ростове Великом. Стиль, стрижки, борода, уход и онлайн-запись." />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="#top" aria-label="BORODABREY">
+        <img class="brand__mark" src="assets/logo.svg" alt="BORODABREY logo" />
+        <div class="brand__text">
+          <div class="brand__name">BORODABREY</div>
+          <div class="brand__sub">barbershop</div>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#top">Главная</a>
+        <a href="#services">Услуги</a>
+        <a href="#barbers">Барберы</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <button class="nav__cta" data-scroll="#contacts">Записаться</button>
+      <button class="burger" id="burger" aria-label="Открыть меню"><span></span></button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#top">Главная</a>
+      <a href="#services">Услуги</a>
+      <a href="#barbers">Барберы</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#contacts">Контакты</a>
+    </div>
+  </div>
+
+  <main class="page">
+    <section class="hero" id="top">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <h1 class="hero__title">BORODABREY</h1>
+          <p class="hero__subtitle">barbershop</p>
+          <p class="hero__desc">
+            Премиальный барбершоп в Ростове Великом. Стильные стрижки, борода, уход и комфортная атмосфера — всё в одном месте, без лишнего шума и без ожидания.
+          </p>
+          <div class="hero__actions">
+            <button class="btn" data-scroll="#contacts">Записаться онлайн</button>
+            <button class="btn btn--ghost" data-scroll="#services">Услуги</button>
+            <button class="btn btn--ghost" data-scroll="#gallery">Интерьер</button>
+          </div>
+          <div class="hero__meta">
+            <span class="hero__chip">⭐ 5.0 рейтинг</span>
+            <span class="hero__chip">217 отзывов</span>
+            <span class="hero__chip">Ростов Великий</span>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="visual-card">
+            <img class="visual-card__img" src="assets/ovanes-hero.png" alt="BORODABREY interior hero photo">
+            <div class="hero__rating">
+              <b>5.0</b>
+              <span>217 отзывов</span>
+              <span class="hero__ratingsmall">По оценкам клиентов</span>
+            </div>
+            <div class="visual-card__info">
+              <h2 class="visual-card__title">BORODABREY</h2>
+              <div class="visual-card__row">
+                <span class="pill">Запись онлайн</span>
+                <span class="pill">Премиум сервис</span>
+                <span class="pill">Комфорт и стиль</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stats__grid">
+          <div class="stat">
+            <div class="stat__icon">✂</div>
+            <b>Качество</b>
+            <p>Топовые средства и внимание к деталям.</p>
+          </div>
+          <div class="stat">
+            <div class="stat__icon">◌</div>
+            <b>Атмосфера</b>
+            <p>Комфортное пространство и приятная музыка.</p>
+          </div>
+          <div class="stat">
+            <div class="stat__icon">◐</div>
+            <b>Стиль</b>
+            <p>Индивидуальный подход к каждому клиенту.</p>
+          </div>
+          <div class="stat">
+            <div class="stat__icon">⏱</div>
+            <b>Время</b>
+            <p>Точно по записи, без ожидания.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section__head">
+        <h2 class="section__title">Наши услуги</h2>
+        <button class="section__link ghost-btn" data-modal="extra-barber">Смотреть все услуги →</button>
+      </div>
+            <div class="service-hero-grid">
+        <article class="service-card" data-modal="cuts-barber">
+          <div class="service-card__media">
+            <img src="assets/Услуги/Прическа.jpg" alt="Мужская стрижка">
+          </div>
+          <div class="service-card__body">
+            <h3>Мужская стрижка</h3>
+            <div class="price">от 900 ₽</div>
+          </div>
+        </article>
+        <article class="service-card" data-modal="extra-barber">
+          <div class="service-card__media">
+            <img src="assets/Услуги/Стрижка бороды.jpg" alt="Стрижка бороды">
+          </div>
+          <div class="service-card__body">
+            <h3>Стрижка бороды</h3>
+            <div class="price">от 200 ₽</div>
+          </div>
+        </article>
+        <article class="service-card" data-modal="complex-barber">
+          <div class="service-card__media">
+            <img src="assets/Услуги/Моделирование бороды.jpg" alt="Моделирование бороды">
+          </div>
+          <div class="service-card__body">
+            <h3>Моделирование бороды</h3>
+            <div class="price">от 600 ₽</div>
+          </div>
+        </article>
+        <article class="service-card" data-modal="cuts-barber">
+          <div class="service-card__media">
+            <img src="assets/Услуги/Детская стрижка.jpg" alt="Детская стрижка">
+          </div>
+          <div class="service-card__body">
+            <h3>Детская стрижка</h3>
+            <div class="price">от 700 ₽</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section story" id="about">
+      <div class="story__img">
+        <img src="assets/Раздел о нас/photo.jpg" alt="BORODABREY premium interior">
+      </div>
+      <div class="story__copy">
+        <div class="story__label">О нас</div>
+        <h3>BORODABREY - больше, чем стрижка</h3>
+        <p>
+          Мы создаём стиль, который подходит именно тебе. Качество, комфорт и атмосфера на первом месте.
+          Доверяй профессионалам, приходи за свежим образом и уходом, который чувствуется с первого взгляда.
+        </p>
+        <button class="btn" data-scroll="#contacts">Подробнее и запись</button>
+      </div>
+    </section>
+
+    <section class="section" id="barbers">
+      <div class="section__head">
+        <h2 class="section__title">Барберы</h2>
+      </div>
+      <div class="barbers__grid">
+        <article class="barber-card">
+          <div class="barber-card__top">
+            <div class="avatar"><img src="assets/ovanes-avatar.png" alt="Ованес"></div>
+            <div>
+              <h3 class="barber-card__name">Ованес</h3>
+              <div class="barber-card__meta">
+                <span class="rating-badge">5.0 ★</span>
+                <span>Отзывы клиентов</span>
+              </div>
+            </div>
+          </div>
+          <div class="reviews">
+            <div class="review">
+              <div class="review__name"><strong>Оля</strong><span>17 сентября 2025</span></div>
+              <p class="review__text">Отличный мастер, спасибо Ованес!</p>
+            </div>
+            <div class="review">
+              <div class="review__name"><strong>Сергей</strong><span>10 сентября 2025</span></div>
+              <p class="review__text">Мастер Ованес отлично знает своё дело, качество стрижки на высоком уровне!</p>
+            </div>
+            <div class="review">
+              <div class="review__name"><strong>Александр</strong><span>4 сентября 2025</span></div>
+              <p class="review__text">Профессионал своего дела.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="barber-card">
+          <div class="barber-card__top">
+            <div class="avatar"><img src="assets/gleb-avatar.png" alt="Глеб"></div>
+            <div>
+              <h3 class="barber-card__name">Глеб</h3>
+              <div class="barber-card__meta">
+                <span class="rating-badge">5.0 ★</span>
+                <span>Отзывы клиентов</span>
+              </div>
+            </div>
+          </div>
+          <div class="reviews">
+            <div class="review">
+              <div class="review__name"><strong>Артем</strong><span>18 сентября 2025</span></div>
+              <p class="review__text">Являюсь постоянным клиентом Глеба! Отличный барбер, всё чётко!</p>
+            </div>
+            <div class="review">
+              <div class="review__name"><strong>Александр</strong><span>25 августа 2025</span></div>
+              <p class="review__text">Стрижка, атмосфера, коллектив, общение — как всегда на высоте! Спасибо!</p>
+            </div>
+            <div class="review">
+              <div class="review__name"><strong>Никита Латышов</strong><span>23 марта</span></div>
+              <p class="review__text">Глеб красавчик.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="section__head">
+        <h2 class="section__title">Галерея</h2>
+        <div class="section__link">Интерьер, атмосфера, детали</div>
+      </div>
+            <div class="gallery__grid">
+        <div class="gallery__item gallery__item--wide"><img src="assets/Галерея/2 сидушки.webp" alt="Две сидушки"></div>
+        <div class="gallery__item gallery__item--tall"><img src="assets/Галерея/плойка с книгами.webp" alt="Плойка с книгами"></div>
+        <div class="gallery__item gallery__item--small"><img src="assets/Галерея/полка с косметикой.webp" alt="Полка с косметикой"></div>
+        <div class="gallery__item gallery__item--small2"><img src="assets/Галерея/полка с машинами.webp" alt="Полка с машинами"></div>
+        <div class="gallery__item gallery__item--small3"><img src="assets/Галерея/сидушка для мытья.webp" alt="Сидушка для мытья"></div>
+      </div>
+    </section>
+
+    <footer class="footer" id="contacts">
+      <div class="section__head">
+        <h2 class="section__title">Записаться онлайн</h2>
+        <div class="section__link">Ростов Великий · 217 отзывов · 5.0 ★</div>
+      </div>
+      <div class="footer__grid">
+        <div class="footer__panel">
+          <div class="footer__brand">
+            <img class="brand__mark" src="assets/logo.svg" alt="BORODABREY logo">
+            <div class="brand__text">
+              <div class="brand__name">BORODABREY</div>
+              <div class="brand__sub">barbershop</div>
+            </div>
+          </div>
+          <p class="footer__text">
+            Место, где создают стиль. Качество, комфорт и индивидуальный подход к каждому клиенту.
+          </p>
+          <div class="socials">
+            <a href="https://vk.com/boroda.brey" target="_blank" rel="noreferrer">VK</a>
+            <a href="https://t.me/+79610271840" target="_blank" rel="noreferrer">TG</a>
+            <a href="https://wa.me/+79610271840?text=%D0%9E%D0%B1%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%B8%D0%B5+%D1%81+%D1%81%D0%B0%D0%B9%D1%82%D0%B0+BORODABREY%0A%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!+%D0%9C%D0%B5%D0%BD%D1%8F+%D0%B7%D0%B0%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%BE%D0%B2%D0%B0%D0%BB%D0%BE+%D0%B2%D0%B0%D1%88%D0%B5+%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5" target="_blank" rel="noreferrer">WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="footer__panel">
+          <h3 class="barber-card__name" style="margin-top:0">Контакты</h3>
+          <div class="footer__contact-list">
+            <a class="contact-link" href="tel:+79010480518"><strong>+7 (901) 048-05-18</strong><span>Позвонить</span></a>
+            <a class="contact-link" href="tel:+79066353190"><strong>+7 (906) 635-31-90</strong><span>Позвонить</span></a>
+            <a class="contact-link" href="tel:+79610271840"><strong>+7 (961) 027-18-40</strong><span>Позвонить</span></a>
+            <a class="contact-link" href="https://yandex.ru/maps/-/CPH7ULMu" target="_blank" rel="noreferrer"><strong>ул. Добролюбова, 25А</strong><span>Яндекс Карты</span></a>
+          </div>
+          <div class="footer__map">
+            <small>Открыть маршрут, посмотреть расписание и построить путь в Яндекс Картах.</small>
+            <button class="btn" onclick="window.open('https://yandex.ru/maps/-/CPH7ULMu','_blank')">Открыть Яндекс Карты</button>
+          </div>
+        </div>
+
+        <div class="footer__panel">
+          <h3 class="barber-card__name" style="margin-top:0">Онлайн-запись</h3>
+          <p class="footer__text">Выбери удобное время и напиши нам любым удобным способом.</p>
+          <div class="socials" style="margin-top:18px">
+            <button class="btn" data-scroll="#services">Выбрать услугу</button>
+            <a href="https://t.me/+79610271840" target="_blank" rel="noreferrer">Написать в TG</a>
+            <a href="https://wa.me/+79610271840?text=%D0%9E%D0%B1%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%B8%D0%B5+%D1%81+%D1%81%D0%B0%D0%B9%D1%82%D0%B0+BORODABREY%0A%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!+%D0%9C%D0%B5%D0%BD%D1%8F+%D0%B7%D0%B0%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%BE%D0%B2%D0%B0%D0%BB%D0%BE+%D0%B2%D0%B0%D1%88%D0%B5+%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5" target="_blank" rel="noreferrer">Написать в WhatsApp</a>
+          </div>
+          <div class="footer__map" style="margin-top:18px">
+            <small>Адрес: Ростов Великий, ул. Добролюбова, 25А</small>
+            <button class="btn" data-scroll="#top">Вернуться вверх</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© BORODABREY 2025</span>
+        <span>Все права защищены</span>
+      </div>
+    </footer>
+  </main>
+
+  <button class="back-to" id="backTo" aria-label="Прокрутить">
+    ↑
+  </button>
+
+  <div class="modal" id="servicesModal" aria-hidden="true">
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <aside class="modal__sidebar">
+        <div class="modal__top" style="margin-bottom:12px">
+          <div>
+            <h3 class="modal__title" id="modalTitle">Услуги</h3>
+            <p class="modal__subtitle">Выбери категорию и посмотри полный список услуг.</p>
+          </div>
+          <button class="modal__close" id="modalClose" aria-label="Закрыть">✕</button>
+        </div>
+        <div class="category-list" id="categoryList"></div>
+      </aside>
+      <main class="modal__main">
+        <div class="modal__top">
+          <div>
+            <h3 class="modal__title" id="currentCategoryTitle">Категория</h3>
+            <p class="modal__subtitle" id="currentCategoryDesc"></p>
+          </div>
+        </div>
+        <div class="service-grid" id="serviceGrid"></div>
+        <div class="modal__footer">
+          <button class="btn" data-scroll="#contacts" id="modalFooterBtn">Записаться онлайн</button>
+          <button class="btn btn--ghost" id="modalToTop">Наверх</button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="services.js"></script>
+  <script>
+    window.BORODABREY_META = {
+      map: "https://yandex.ru/maps/-/CPH7ULMu",
+      telegram: "https://t.me/+79610271840",
+      whatsapp: "https://wa.me/+79610271840?text=%D0%9E%D0%B1%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%B8%D0%B5+%D1%81+%D1%81%D0%B0%D0%B9%D1%82%D0%B0+BORODABREY%0A%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!+%D0%9C%D0%B5%D0%BD%D1%8F+%D0%B7%D0%B0%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%BE%D0%B2%D0%B0%D0%BB%D0%BE+%D0%B2%D0%B0%D1%88%D0%B5+%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5",
+      phones: [
+        "+79010480518",
+        "+79066353190",
+        "+79610271840"
+      ]
+    };
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

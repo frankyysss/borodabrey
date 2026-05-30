@@ -1,4 +1,4 @@
-    :root{
+:root{
       --bg:#090807;
       --bg-2:#0d0b0a;
       --panel:#11100e;
@@ -18,7 +18,8 @@
       --max:1280px;
     }
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:96px}
+    /* Добавили overflow-x: hidden для html, чтобы намертво убить дерганье вправо */
+    html{scroll-behavior:smooth;scroll-padding-top:96px; overflow-x:hidden;}
     body{
       margin:0;
       font-family: Inter, Manrope, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -173,13 +174,15 @@
       color:#dbc7b3;
       opacity:.9;
     }
+    /* Исправлен заголовок, чтобы не вылезал */
     .hero__title{
       margin:0;
-      font-size:clamp(3.9rem, 8vw, 7.9rem);
+      font-size:clamp(2.5rem, 9vw, 7.9rem);
       line-height:.92;
       letter-spacing:.06em;
       text-transform:uppercase;
       font-weight:700;
+      word-break: break-word;
     }
     .hero__subtitle{
       margin:0;
@@ -803,9 +806,12 @@
       backdrop-filter: blur(12px);
     }
     .modal.is-open{display:flex}
+    
+    /* ИСПРАВЛЕНИЕ: Жёстко задана высота (height: 86vh), чтобы скролл на ПК заработал */
     .modal__panel{
       width:min(1200px, 100%);
-      max-height:min(86vh, 900px);
+      height:86vh;
+      max-height:900px;
       overflow:hidden;
       border-radius:28px;
       border:1px solid rgba(255,255,255,.1);
@@ -952,8 +958,23 @@
       .story{grid-template-columns:1fr}
       .footer__grid{grid-template-columns:1fr}
       .gallery__item--wide,.gallery__item--tall,.gallery__item--small,.gallery__item--small2,.gallery__item--small3{grid-column:span 6}
-      .modal__panel{grid-template-columns:1fr}
-      .modal__sidebar{border-right:0;border-bottom:1px solid rgba(255,255,255,.07)}
+      
+      /* ИСПРАВЛЕНИЕ МОДАЛКИ: На мобилках выстраиваем вертикально и разрешаем всему блоку скроллиться */
+      .modal__panel {
+        display: flex;
+        flex-direction: column;
+        height: 92vh;
+        overflow-y: auto;
+      }
+      .modal__sidebar {
+        border-right: 0;
+        border-bottom: 1px solid rgba(255,255,255,.07);
+        overflow: visible;
+        flex-shrink: 0;
+      }
+      .modal__main {
+        overflow: visible;
+      }
     }
     @media (max-width: 760px){
       .page{padding:14px 14px 28px}
@@ -962,7 +983,10 @@
       .burger{display:inline-flex}
       .hero{padding-top:14px}
       .hero__copy{padding-top:18px}
-      .hero__title{font-size:clamp(3rem, 16vw, 5rem)}
+      
+      /* ИСПРАВЛЕНИЕ: Уменьшили заголовок на узких экранах, чтобы он не ломал ширину страницы */
+      .hero__title{font-size:clamp(1.8rem, 10vw, 3.2rem)}
+      
       .hero__visual{min-height:480px}
       .stats__grid{grid-template-columns:1fr}
       .stat{border-right:0;border-bottom:1px solid rgba(255,255,255,.06)}
@@ -976,7 +1000,6 @@
       .footer{margin-top:62px}
       .modal{padding:10px}
       .modal__main, .modal__sidebar{padding:16px}
-      .modal__panel{max-height:92vh}
       .service-item__bottom{flex-direction:column;align-items:flex-start}
       .back-to{right:14px; bottom:14px}
       .footer__bottom{flex-direction:column;align-items:flex-start}
